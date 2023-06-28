@@ -63,4 +63,23 @@ return require('packer').startup(function(use)
   -- NOTE: requires that npm is installed
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
+  -- Smooth scrolling
+  use('karb94/neoscroll.nvim')
+
+  -- Automatic pairs for quotes, brackets, etc.
+  use('windwp/nvim-autopairs')
+
+  -- Authmatic tag closing
+  use('windwp/nvim-ts-autotag')
+
+  -- Line by line git changed/blame
+  use('lewis6991/gitsigns.nvim')
+
+  use ({
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+  })
+
 end)
