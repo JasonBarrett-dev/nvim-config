@@ -8,8 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -23,11 +22,6 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 
   use('tpope/vim-fugitive')
-
-  use({
-      'folke/todo-comments.nvim',
-      requires = "nvim-lua/plenary.nvim",
-  })
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -50,13 +44,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  use {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
-  }
-
   use('ThePrimeagen/harpoon')
 
   -- Live markdown preview in browser
@@ -74,12 +61,5 @@ return require('packer').startup(function(use)
 
   -- Line by line git changed/blame
   use('lewis6991/gitsigns.nvim')
-
-  use ({
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-          'nvim-tree/nvim-web-devicons', -- optional
-      },
-  })
 
 end)
